@@ -1,0 +1,15 @@
+.right-icon {
+    float: right;
+}
+.fas {
+    margin-left: 5px;
+}
+
+#btn-add-course {
+    float: right;
+}
+
+.time-input {
+    max-width: 200px;
+    display: inline-block;
+}

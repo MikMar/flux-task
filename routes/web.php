@@ -17,3 +17,8 @@ Route::get('/course/{id}', 'IndexController@course');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/courses', 'HomeController@courses');
+Route::get('/home/add-course', 'HomeController@addCourse');
+Route::get('/home/edit-course/{id}', 'HomeController@editCourse');
+Route::post('/home/delete-course/{id}', 'HomeController@deleteCourse');
+Route::post('/home/save-course', 'HomeController@saveCourse');
