@@ -25,4 +25,19 @@ class Course extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function teacher()
+    {
+        return $this->hasOne(Teacher::class, 'id', 'teacher_id');
+    }
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class, 'rf_students_courses');
+    }
+
+    public function schedules()
+    {
+        return $this->hasMany(Schedule::class, 'course_id', 'id');
+    }
 }
