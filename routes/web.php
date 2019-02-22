@@ -13,3 +13,7 @@
 
 Route::get('/', 'IndexController@courses');
 Route::get('/course/{id}', 'IndexController@course');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
