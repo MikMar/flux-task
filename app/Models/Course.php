@@ -9,7 +9,8 @@ class Course extends Model
     protected $table = 'courses';
 
     protected $fillable = [
-        'title'
+        'title',
+        'teacher_id'
     ];
 
     protected $attributes = [
