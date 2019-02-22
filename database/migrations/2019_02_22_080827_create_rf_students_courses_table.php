@@ -14,8 +14,9 @@ class CreateRfStudentsCoursesTable extends Migration
     public function up()
     {
         Schema::create('rf_students_courses', function (Blueprint $table) {
-            $table->integer('student_id')->unsigned()->index();
-            $table->integer('course_id')->unsigned()->index();
+            $table->integer('student_id')->unsigned();
+            $table->integer('course_id')->unsigned();
+            $table->unique('student_id', 'course_id');
         });
     }
 
