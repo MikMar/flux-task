@@ -12,6 +12,20 @@
 </head>
 <body>
 
+<h1>{{$course->title}}</h1>
+<h3>Teacher - {{$course->teacher->name_surname}}</h3>
+<h3>Students</h3>
+<ul>
+    @foreach($course->students as $student)
+        <li>{{$student->name_surname}}</li>
+    @endforeach
+</ul>
+<h3>Schedule</h3>
+<ul>
+    @foreach($course->schedules as $schedule)
+        <span>Day of week - {{$schedule->week_day}}, Start time - {{$schedule->start}}, End time - {{$schedule->end}}</span><br>
+    @endforeach
+</ul>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
